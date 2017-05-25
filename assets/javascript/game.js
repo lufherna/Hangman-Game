@@ -1,8 +1,7 @@
 
 
-// random letter generator and variables down below
+// random word generator and variables down below
 var heroes = ['Superman', 'Batman', 'Captain America', 'Hulk'];
-
 var numberOfGuesses = 10;
 var wins = 0;
 var losses = 0;
@@ -28,7 +27,10 @@ document.onkeyup = function runProgram(event){
 	if(numberOfGuesses > 0) {
 
 		var userGuess = event.key;
+		heroes.forEach(function(heroes) {
+			console.log(heroes);
 
+		})
 			//if user guesses right
 		if(userGuess === computerGuess){
 			wins++;
@@ -60,7 +62,7 @@ document.onkeyup = function runProgram(event){
 	} else {
 
 		losses++
-		alert("Game Over Joker");
+		alert("Game Over");
 		numberOfGuesses = 10;
 		newRandom()
 		runProgram();
