@@ -1,20 +1,30 @@
 
 
 // random word generator and variables down below
-var heroes = ['Superman', 'Batman', 'Captain America', 'Hulk'];
+var heroes = [
+['S','U','P','E','R','M','A','N'],
+['B','A','T','M','A','N'],
+['H','U','L','K'] ];
 var numberOfGuesses = 10;
 var wins = 0;
 var losses = 0;
 var pressedKeys = [];
 var computerGuess = '';
 
+var randomH = Math.floor((Math.random()*(heroes.length)));
 
-//generate random letter
+var randomHero = heroes[randomH];//variable for the random word
+
 function newRandom(){
 
 	computerGuess = heroes[Math.floor(Math.random() * heroes.length)];
 	numberOfGuesses = 10
-	console.log('function ran, new letter = ' + computerGuess)
+} for (var i = 0; i < heroes.length; i++) {
+		{
+			if(heroes[i].indexOf('') != -1)
+				alert(heroes[i])
+		}
+
 }
 
 newRandom();
